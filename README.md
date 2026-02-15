@@ -13,9 +13,12 @@ This application displays a candle that burns down over 10 seconds, accompanied 
 ├── index.html          # HTML entry point
 ├── style.css           # All CSS styles
 ├── package.json        # Project metadata and scripts
+├── playwright.config.js # Playwright test configuration
 ├── README.md           # Documentation
-└── src/
-    └── index.js        # Core JavaScript logic and animations
+├── src/
+│   └── index.js        # Core JavaScript logic and animations
+└── tests/
+    └── candle.spec.js  # Playwright end-to-end tests
 ```
 
 ### Core Technologies
@@ -267,6 +270,44 @@ Generates particle effects at the wick position.
 - **Flame** - Yellow/Orange/Red gradient (#ffeb3b to #ff5722)
 - **Stopwatch** - Dark metallic (#2c3e50 to #34495e)
 - **Hand** - Skin tone gradient (#f5cba7 to #d68910)
+
+## Testing
+
+This project uses [Playwright](https://playwright.dev/) for end-to-end testing.
+
+### Test Coverage
+- Page load and element rendering
+- Lighting animation sequence
+- Timer and stopwatch functionality
+- Pause/resume interactions
+- Reset after burn out
+- Visual animations (sparks, flame, candle scaling)
+
+### Running Tests
+
+```bash
+# Run all tests headlessly
+npm test
+
+# Run tests with UI mode for debugging
+npm run test:ui
+
+# Run tests in headed mode (visible browser)
+npm run test:headed
+
+# Run tests in debug mode
+npm run test:debug
+
+# View test report
+npm run test:report
+```
+
+### Test Configuration
+Tests are configured in `playwright.config.js` to:
+- Automatically start the dev server on port 3000
+- Run against Chromium browser
+- Capture screenshots and videos on failure
+- Generate HTML reports
 
 ## Future Enhancements
 
