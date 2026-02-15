@@ -1,9 +1,23 @@
 {
-  "name": "candle-app",
+  "name": "burning-candle-app",
   "version": "1.0.0",
+  "description": "An interactive web application featuring a realistic animated candle with a countdown timer, lighting animation, and smooth visual effects.",
   "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "start": "open index.html"
+    "start": "npx serve .",
+    "dev": "npx serve . --single",
+    "open": "start index.html"
   },
+  "keywords": [
+    "candle",
+    "animation",
+    "javascript",
+    "css",
+    "interactive"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
   "dependencies": {}
 }

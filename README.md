@@ -9,10 +9,14 @@ This application displays a candle that burns down over 10 seconds, accompanied 
 ## Technical Architecture
 
 ### File Structure
-- `index.html` - HTML structure and embedded CSS styles
-- `candleApp.js` - Core JavaScript logic and animations
-- `style.css` - Additional stylesheet (minimal usage)
-- `package.json` - Project metadata
+```
+├── index.html          # HTML entry point
+├── style.css           # All CSS styles
+├── package.json        # Project metadata and scripts
+├── README.md           # Documentation
+└── src/
+    └── index.js        # Core JavaScript logic and animations
+```
 
 ### Core Technologies
 - **HTML5** - Semantic markup and structure
